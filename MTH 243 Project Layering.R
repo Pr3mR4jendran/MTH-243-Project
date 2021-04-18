@@ -56,4 +56,11 @@ ggplot(data, aes(y=mpg,x=wt,col=factor(vs))) + geom_point() + geom_smooth(method
 
 cor(data) #to show the correlation between our variables
 
+#simple data frame
+df = data.frame("brand" = c("Samsung","Huawei","Apple","Xiaomi","OPPO","Other"),"share" = c(0.2090,0.1580,0.1210,0.0930,0.0860,0.3320))
+head(df)
+
+#Pie Chart
+ggplot(df, aes(x = "", y = share, fill = brand)) + geom_bar(stat = "identity") + coord_polar("y", start=0)
+
 #introduce faceting here
