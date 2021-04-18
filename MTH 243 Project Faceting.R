@@ -25,7 +25,7 @@ mtcars
 # Margins can be specified logically (all yes or all no) or for specific variables as (character) variable names
 mg <- ggplot(mtcars, aes(x = mpg, y = wt)) + geom_point()
 mg
-explain the telda sign.
+#explain the telda sign.
 mg + facet_grid(vs + am ~ gear, margins = TRUE) ##margins vs, am, gears.
 mg + facet_grid(vs + am ~ gear, margins = "am") ##margins only am.
 ###I can do with boxplot
